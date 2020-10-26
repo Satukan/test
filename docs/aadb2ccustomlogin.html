@@ -6,20 +6,40 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Welcome</h1>
 
-    <!-- Leave this element empty because Azure AD B2C will insert content here. -->
-    <div id="api"></div>
+    <div class="container">
+        <!--<h1>Welcome</h1>-->
 
-    <div class="d-flex">
-        <button class="mx-auto btn btn-primary" onclick="location.href='https://markcarrollmethod.b2clogin.com/markcarrollmethod.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_PasswordReset&client_id=9ef87bae-0ad4-4008-8536-1d457cbb7775&nonce=defaultNonce&redirect_uri=https%3A%2F%2Flocalhost%3A44319%2Fauthentication%2Fpasswordreset-callback&scope=openid&response_type=id_token&prompt=login'">Forgot Password</button>
+        <!-- Container for the AAD B2C login form -->
+        <div id="api" style="width: 500px;">
+
+        </div>
+
+        <div class="d-flex">
+            <button class="mx-auto btn btn-outline-primary" onclick="location.href = 'https://markcarrollmethod.b2clogin.com/markcarrollmethod.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_PasswordReset&client_id=9ef87bae-0ad4-4008-8536-1d457cbb7775&nonce=defaultNonce&redirect_uri=https%3A%2F%2Flocalhost%3A44319%2Fauthentication%2Fpasswordreset-callback&scope=openid&response_type=id_token&prompt=login'">Forgot Password</button>
+        </div>
     </div>
+
+
 
 </body>
 </html>
 
 <style>
-    h1 {
+
+    body {
+        height: 100vh;
+        display: flex;
+    }
+
+    .container {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 380px;
+    }
+
+/*    h1 {
         color: blue;
         text-align: center;
     }
@@ -42,5 +62,24 @@
         width: 400px;
         margin-left: auto;
         margin-right: auto;
+    }*/
+
+    /* Main form */
+    .localAccount {
+
+    }
+
+    /* Main form elements */
+    .intro {
+
+    }
+    .entry {
+
+    }
+    .divider {
+
+    }
+    .create {
+
     }
 </style>
